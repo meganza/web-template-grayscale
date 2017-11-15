@@ -15,8 +15,10 @@ peacock - https://www.pexels.com/photo/blue-and-green-peacock-638738/
 pupper - https://www.pexels.com/photo/animal-bandana-blur-canine-239331/
 hooman - https://www.pexels.com/photo/adult-beautiful-blur-bokeh-273037/
 
-Button hover will come from https://freebiesupply.com/blog/css-button-hover-effects/. I don't exactly know which one exactly but I'll update this when everything gets specific already.
+Button hover will come from https://freebiesupply.com/blog/css-button-hover-effects/.
 Social media icons https://codepen.io/Deadlymuffin/pen/hGiqo/
+
+Note: the hover/overlay thing for the "gallery" is still pretty wonky when resized.
 
 This is made with Yeoman-webapp and bootstrap!
 
