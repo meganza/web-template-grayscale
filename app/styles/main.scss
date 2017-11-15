@@ -4,6 +4,7 @@ $icon-font-path: '../fonts/';
 // endbower
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 h1 {
   text-transform: uppercase;
@@ -11,14 +12,57 @@ h1 {
   font-size: 7vw;
 }
 
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h2 {
+  color: #ccc;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+h3 {
+  color: #bbb;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #eee;
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+h5 {
+  font-size: 15px;
+  color: #eee;
+  padding: 0;
+  margin: 0;
+}
+
+h6 {
+  font-size: 23px;
+  font-weight: normal;
+  font-style: italic;
+  color: #eee;
+  padding: 0;
+  margin: 0;
+}
 
 p {
   font-size: 15px;
+  color: #c0c0c0;
+  text-align: left;
+}
+
+p > a {
+  font-style: italic;
+  border-bottom: 1px #777 dotted;
 }
 
 a {
@@ -28,7 +72,7 @@ a {
 }
 
 a:hover {
-  color: #aaa;
+  color: #777;
   text-decoration: none;
 
   -moz-transition: all .5s;
@@ -37,6 +81,45 @@ a:hover {
   transition: all .5s;
 }
 
+img {
+  object-fit: cover;
+  width:250px;
+  height:250px;
+  margin: 10px;
+}
+
+.img-small {
+  height: 170px;
+  width: 170px;
+}
+
+.overlay {
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  width: 250px;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.8);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
 
 .lighter { font-weight: lighter; }
@@ -48,19 +131,41 @@ a:hover {
   text-align: center;
 }
 
-.vcenter {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+.heading {
+  /*text-align: left;*/
+  /*padding-left: 2vw;*/
+}
+
+.section {
+  padding: 4vw 2vw;
+}
+
+.odd {
+  background: #353535;
+}
+
+.even {
+  background: #292929;
 }
 
 body {
   background: transparent;
+  color: #111;
   font-family: 'Open Sans', sans-serif;
 }
 
 .container-fluid {
   padding: 0px;
+}
+
+.jumbotron {
+  background: transparent;
+  color: #fff;
+  padding: 17vw 0vw;
+}
+
+.jumbotron h1 {
+  font-size: 7vw;
 }
 
 #bg {
@@ -108,15 +213,20 @@ body {
   background: #222;
   border-radius: 0px;
   font-size: 15px;
+  box-shadow: 0 4px 10px -1px #111;
 }
 
 .container-fluid > .navbar-header {
   margin-right: 0;
 }
 
+.container-fluid > .navbar-collapse {
+  margin: 0;
+}
+
 .navbar-toggle {
-  background: #fff;
-  margin-right: 0px;
+  background: rgba(255, 255, 255, .3);
+  margin-right: 10px;
 }
 
 .navbar-toggle .icon-bar {
@@ -183,13 +293,89 @@ body {
     transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
 }
 
-.vert-align{
-  margin-top: 20vh;
+.footer {
+  background: #222;
 }
 
-.allTransition {
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+.footer p {
+  font-size: 12px;
+  letter-spacing: .5px;
+  color: #888;
 }
+
+.footer a {
+  font-size: 12px;
+}
+
+.glyphicon {
+  color: #ddd;
+  padding-right: 2px;
+}
+
+.social-icon {
+    color: #fff;
+}
+
+ul.social-icons {
+  padding: 0;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+
+.fa-github {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+.fa-github:hover {
+    background-color: #24292e;
+}
+
